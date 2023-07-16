@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+.navbar-content {
+  display: flex;
+  position: relative;
+  bottom: 40vh;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  font-size: 30px;
+  font-family: "Quicksand";
+}
+
+.botons {
+  display: flex;
+  margin-left: 50vh;
+  font-family: "Quicksand";
+  font-size: 20px;
+}
+.botons a {
+  position: relative;
+  top: 5px;
+  margin-right: 18vh;
+}
+.navbar-content .nav-brand {
+  color: #161a1d;
+  text-decoration: none;
+}
+
+.navbar-content .botons a {
+  margin-left: 10px;
+  color: #161a1d;
+  text-decoration: none;
+}
+
+.navbar-content .botons a:hover {
+  color: #6a040f;
+}
+
+.navbar-content .dropdown-menu {
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: auto;
+  min-width: 200px;
+  transform: translateX(-30%);
+  z-index: 1000;
+  float: left;
+  padding: 0;
+  margin: 0;
+  font-size: 1rem;
+  text-align: left;
+  list-style: none;
+  background-color: #8d99ae;
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 0.25rem;
+  font-family: "Quicksand";
+}
+
+.cart-container {
+  position: relative;
+}
+
+.cart-icon {
+  position: absolute;
+  right: 20vh;
+  top: 9px;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+}
