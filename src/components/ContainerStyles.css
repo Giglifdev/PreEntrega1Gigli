@@ -1,0 +1,40 @@
+.card {
+  position: relative;
+  left: 75px;
+  top: 50px;
+
+  border: 1px solid #2b2d42;
+  border-radius: 1rem;
+  margin-bottom: 60px;
+}
+
+.change {
+  background-color: #cdb4db;
+  color: black;
+  font-size: 15px;
+  border-radius: 10px;
+}
+
+.sum {
+  background-color: #cdb4db;
+  color: black;
+  font-size: 15px;
+  border-radius: 10px;
+  margin-left: 30px;
+}
+
+.substract {
+  background-color: #cdb4db;
+  color: black;
+  font-size: 15px;
+  border-radius: 10px;
+  margin-left: 30px;
+}
+
+.reset {
+  background-color: #cdb4db;
+  color: black;
+  font-size: 15px;
+  border-radius: 10px;
+  margin-left: 30px;
+}
