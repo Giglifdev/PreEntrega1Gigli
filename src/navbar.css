@@ -1,71 +1,107 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
-.navbar-content {
+
+/**
+* ! NavBar , Brand, botons and cart
+**/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar-container {
   display: flex;
-  position: relative;
-  bottom: 40vh;
-  justify-content: space-between;
-  align-items: center;
+  position: sticky;
+  top: 0px;
   width: 100%;
-  font-size: 30px;
+  height: 120px;
   font-family: "Quicksand";
+}
+.nav-brand {
+  position: relative;
+  bottom: 0;
+  right: 50px;
+  font-size: 30px !important;
 }
 
 .botons {
+  bottom: 30px;
   display: flex;
-  margin-left: 50vh;
+  margin-left: auto;
   font-family: "Quicksand";
   font-size: 20px;
 }
-.botons a {
+
+.nav-boton {
+  margin-left: 90px;
+  font-size: 20px;
+  color: #161a1d;
+}
+
+#dropdown-basic {
   position: relative;
-  top: 5px;
-  margin-right: 18vh;
-}
-.navbar-content .nav-brand {
+  left: 50px;
+  bottom: 7px;
+  border-radius: 2rem;
   color: #161a1d;
-  text-decoration: none;
-}
-
-.navbar-content .botons a {
-  margin-left: 10px;
-  color: #161a1d;
-  text-decoration: none;
-}
-
-.navbar-content .botons a:hover {
-  color: #6a040f;
-}
-
-.navbar-content .dropdown-menu {
-  display: block;
-  position: absolute;
-  top: 100%;
-  left: auto;
-  min-width: 200px;
-  transform: translateX(-30%);
-  z-index: 1000;
-  float: left;
-  padding: 0;
-  margin: 0;
-  font-size: 1rem;
-  text-align: left;
-  list-style: none;
-  background-color: #8d99ae;
-  background-clip: padding-box;
-  border: 1px solid rgba(0, 0, 0, 0.15);
-  border-radius: 0.25rem;
+  border: #cdb4db;
+  background-color: #cdb4db;
+  font-size: 20px;
   font-family: "Quicksand";
 }
 
-.cart-container {
-  position: relative;
+.menudrop {
+  .dropdown-menu {
+    position: relative;
+    top: 25px;
+    left: 10px;
+    border-radius: 1rem;
+    background-color: #cdb4db;
+    padding: 10px;
+    font-family: "Quicksand";
+  }
+}
+
+.dropdown-menu a {
+  color: #161a1d;
+  margin-right: 35px;
+}
+
+.dropdown-item {
+  border-bottom: 1px inset grey;
+}
+
+.dropdown-item:last-child {
+  border-bottom: none;
+}
+.nav-boton:hover {
+  color: #4a4e69;
+}
+
+.dropdown-menu a:hover {
+  color: #4a4e69;
+  border-radius: 1rem;
+  background-color: #9f86c0;
+}
+.navbar-content .botons a {
+  margin-left: 10px;
+  text-decoration: none;
 }
 
 .cart-icon {
-  position: absolute;
-  right: 20vh;
-  top: 9px;
+  position: relative;
+  bottom: 8px;
+  left: 60px;
   display: flex;
   align-items: center;
-  padding: 5px;
 }
+
+.count {
+  position: relative;
+  font-size: 15px;
+  top: 3px;
+  right: 15px;
+}
+/**
+* ! NavBar , Brand, botons and cart
+**/
