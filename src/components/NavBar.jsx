@@ -16,10 +16,10 @@ function NavBar() {
             </Link>
           </div>
           <Nav className="botons">
-            <a href="#home" className="nav-boton">
+            <Link to="/" className="nav-boton">
               Home
-            </a>
-            <Link to="/notebooks" className="nav-boton">
+            </Link>
+            <Link to="store/notebooks" className="nav-boton">
               Notebooks
             </Link>
 
@@ -28,24 +28,26 @@ function NavBar() {
 
               <Dropdown.Menu className="dropdown-menu">
                 <Dropdown.Item>
-                  <Link to={`/audio/`}>Audio</Link>
+                  <Link to={`store/audio/`}>Audio</Link>
                 </Dropdown.Item>
                 <Dropdown.Item className="dropdown-item">
-                  <Link to={`/keyboards/`}>Keyboards</Link>
+                  <Link to={`store/keyboards/`}>Keyboards</Link>
                 </Dropdown.Item>
                 <Dropdown.Item className="dropdown-item">
-                  <Link to={`/mouse/`}>Mouse</Link>
+                  <Link to={`store/mouse/`}>Mouse</Link>
                 </Dropdown.Item>
                 <Dropdown.Item className="dropdown-item" href="#/action-4">
-                  <Link to={`/mousepads/`}>Mousepads</Link>
+                  <Link to={`store/mousepads/`}>Mousepads</Link>
                 </Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown>
-            <a href="#link" className="nav-boton">
+            <a href="/contact" className="nav-boton">
               Contact
             </a>
 
-            <CartWidget />
+            <Link to={`/cart`} className="nav-boton">
+              <CartWidget />
+            </Link>
           </Nav>
         </Container>
       </Navbar>

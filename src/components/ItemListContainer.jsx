@@ -55,7 +55,7 @@ const ItemListContainer = () => {
         name: "Razer BlackWidow V4 Pro",
         price: 22999,
         stock: 5,
-        image: "/public/Images/Keyboards/RAZER_BLACKWIDOW_V4_jpg",
+        image: "/public/Images/Keyboards/RAZER_BLACKWIDOW_V4.jpg",
       },
       {
         id: 2,

@@ -5,6 +5,7 @@ import Home from "./components/Home";
 import Footer from "./components/Footer";
 import ItemListContainer from "./components/ItemListContainer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Contact from "./components/Contact";
 
 const App = () => {
   return (
@@ -13,7 +14,6 @@ const App = () => {
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route path="/notebooks" element={<ItemListContainer />} />
-
         <Route path="/store/:category" element={<ItemListContainer />} />
       </Routes>
 
