@@ -1,23 +1,23 @@
 import React from "react";
-import Button from "react-bootstrap/Button";
+import ItemCounter from "./ItemCounter";
 import Card from "react-bootstrap/Card";
 
-const ItemDetail = () => {
-  return;
-
-  function BasicExample() {
-    return (
-      <Card style={{ width: "18rem" }}>
-        <Card.Img variant="top" src="holder.js/100px180" />
-        <Card.Body>
-          <Card.Text>
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </Card.Text>
-        </Card.Body>
-      </Card>
-    );
-  }
+const ItemDetail = ({ product }) => {
+  return (
+    <Card style={{ width: "18rem" }}>
+      <Card.Img variant="top" src={product.image} />
+      <Card.Body>
+        <Card.Title>{product.name}</Card.Title>
+        <Card.Text>
+          Price: {product.price}
+          <br />
+          Stock: {product.stock}
+        </Card.Text>
+        <Button variant="dark">Add to Cart</Button>
+      </Card.Body>
+      <ItemCounter />
+    </Card>
+  );
 };
 
 export default ItemDetail;

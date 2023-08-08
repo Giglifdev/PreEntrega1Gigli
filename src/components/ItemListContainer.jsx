@@ -239,7 +239,9 @@ const ItemListContainer = () => {
   };
   const { category } = useParams();
 
-  const filteredProducts = products[category] || [];
+  const filteredProducts = Array.isArray(products[category])
+    ? products[category]
+    : [];
   return (
     <div>
       <ItemList products={filteredProducts} />

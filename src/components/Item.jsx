@@ -1,6 +1,7 @@
 import React from "react";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
+import { Link } from "react-router-dom";
 
 function Item(props) {
   return (
@@ -19,7 +20,9 @@ function Item(props) {
       <Card.Body>
         <Card.Title style={{ fontSize: "1.2rem" }}>{props.name}</Card.Title>
         <Card.Text>Price:{props.price}</Card.Text>
-        <Button variant="dark">Detail</Button>
+        <Link to={`/item/${props.id}`}>
+          <Button variant="dark">Detail</Button>
+        </Link>
       </Card.Body>
     </Card>
   );
