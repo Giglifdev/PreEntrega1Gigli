@@ -10,16 +10,14 @@ function NavBar() {
         <Container>
           <div className="navbar-content">
             <Link to={`/`}>
-              <Navbar.Brand href="#home" className="nav-brand">
-                HardwareHaven
-              </Navbar.Brand>
+              <Navbar.Brand className="nav-brand">HardwareHaven</Navbar.Brand>
             </Link>
           </div>
           <Nav className="botons">
             <Link to="/" className="nav-boton">
               Home
             </Link>
-            <Link to="store/notebooks" className="nav-boton">
+            <Link to="/store/notebooks" className="nav-boton">
               Notebooks
             </Link>
 
@@ -28,16 +26,16 @@ function NavBar() {
 
               <Dropdown.Menu className="dropdown-menu">
                 <Dropdown.Item>
-                  <Link to={`store/audio/`}>Audio</Link>
+                  <Link to={`/store/audio/`}>Audio</Link>
                 </Dropdown.Item>
                 <Dropdown.Item className="dropdown-item">
-                  <Link to={`store/keyboards/`}>Keyboards</Link>
+                  <Link to={`/store/keyboards/`}>Keyboards</Link>
                 </Dropdown.Item>
                 <Dropdown.Item className="dropdown-item">
-                  <Link to={`store/mouse/`}>Mouse</Link>
+                  <Link to={`/store/mouse/`}>Mouse</Link>
                 </Dropdown.Item>
                 <Dropdown.Item className="dropdown-item" href="#/action-4">
-                  <Link to={`store/mousepads/`}>Mousepads</Link>
+                  <Link to={`/store/mousepads/`}>Mousepads</Link>
                 </Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown>

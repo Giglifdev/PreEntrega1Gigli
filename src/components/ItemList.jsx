@@ -11,14 +11,12 @@ const ItemList = ({ products }) => {
       <Row>
         {products.map((product) => (
           <Col key={product.id} sm={3} md={2} lg={3} xl={4}>
-            <div className="cardObjects">
-              <Item
-                name={product.name}
-                price={product.price}
-                stock={product.stock}
-                image={product.image}
-              />
-            </div>
+            <Item
+              name={product.name}
+              price={product.price}
+              stock={product.stock}
+              image={product.image}
+            />
           </Col>
         ))}
       </Row>

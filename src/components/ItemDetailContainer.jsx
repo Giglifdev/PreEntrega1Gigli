@@ -3,15 +3,15 @@ import ItemDetail from "./ItemDetail";
 import { useParams } from "react-router-dom";
 
 const ItemDetailContainer = ({ products }) => {
-  const { id } = useParams();
-
-  const productId = parseInt(id);
-
-  const product = products.find((item) => item.id === productId);
+  const { category, id } = useParams();
+  const selectedCategoryProducts = products[category] || [];
+  const filteredProduct = selectedCategoryProducts.find(
+    (product) => product.id === parseInt(id)
+  );
 
   return (
     <div>
-      <ItemDetail product={product} />
+      <ItemDetail product={filteredProduct} />
     </div>
   );
 };
