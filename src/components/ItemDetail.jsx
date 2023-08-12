@@ -6,17 +6,15 @@ import ItemCounter from "./ItemCounter";
 const ItemDetail = ({ product }) => {
   return (
     <div>
-      {product && (
-        <Card style={{ width: "18rem" }}>
-          <Card.Img variant="top" src={product.image} />
-          <Card.Body>
-            <Card.Title>{product.name}</Card.Title>
-            <Card.Text>{product.stock}</Card.Text>
-            <Button variant="dark">Add to Cart</Button>
-          </Card.Body>
-          <ItemCounter />
-        </Card>
-      )}
+      <Card style={{ width: "18rem" }}>
+        <Card.Img variant="top" src={product.image} />
+        <Card.Body>
+          <Card.Title>{product.name}</Card.Title>
+          <Card.Text>{product.stock}</Card.Text>
+          <Button variant="dark">Add to Cart</Button>
+        </Card.Body>
+        <ItemCounter />
+      </Card>
     </div>
   );
 };

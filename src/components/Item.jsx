@@ -21,7 +21,7 @@ function Item({ name, image, price, id }) {
       <Card.Body>
         <Card.Title style={{ fontSize: "1.2rem" }}>{name}</Card.Title>
         <Card.Text>Price:{price}</Card.Text>
-        <Link to={`/detail/${id}`}>
+        <Link to={`/item/${id}`}>
           <Button variant="dark">Detail</Button>
         </Link>
       </Card.Body>
