@@ -3,7 +3,7 @@ import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import { Link } from "react-router-dom";
 
-function Item({ name, image, price, id }) {
+function Item({ name, image, price, category }) {
   return (
     <Card
       className="cardObjects"
@@ -21,7 +21,7 @@ function Item({ name, image, price, id }) {
       <Card.Body>
         <Card.Title style={{ fontSize: "1.2rem" }}>{name}</Card.Title>
         <Card.Text>Price:{price}</Card.Text>
-        <Link to={`/item/${id}`}>
+        <Link to={`/detail/${category}`}>
           <Button variant="dark">Detail</Button>
         </Link>
       </Card.Body>

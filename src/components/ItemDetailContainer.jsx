@@ -1,5 +1,4 @@
 import React from "react";
-import ItemDetail from "./ItemDetail";
 import products from "./data.js";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
@@ -10,22 +9,13 @@ const ItemDetailContainer = () => {
   const [loadedProduct, setLoadedProduct] = useState(null);
 
   useEffect(() => {
-    const getProducts = new Promise((resolve) => {
-      setTimeout(() => {
-        resolve(products);
-      }, 2000);
-    });
+    const productDetail = products
+      .flatMap((category) => category)
+      .find((product) => product.id === parseInt(id));
 
-    getProducts.then((res) => {
-      const allProducts = Object.values(res).flat();
-      const selectedProduct = allProducts.find(
-        (product) => product.id === parseInt(id)
-      );
-
-      if (selectedProduct) {
-        setLoadedProduct(selectedProduct);
-      }
-    });
+    if (productDetail) {
+      setLoadedProduct(productDetail);
+    }
   }, [id]);
 
   return <>{loadedProduct && <ItemDetail product={loadedProduct} />}</>;

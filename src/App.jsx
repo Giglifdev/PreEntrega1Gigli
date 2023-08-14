@@ -7,7 +7,7 @@ import Contact from "./components/Contact";
 import Cart from "./components/Cart";
 import ItemListContainer from "./components/ItemListContainer";
 import ItemDetailContainer from "./components/ItemDetailContainer";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 const App = () => {
   return (
@@ -15,11 +15,10 @@ const App = () => {
       <NavBar />
       <Routes>
         <Route exact path="/" element={<Home />} />
-        <Route path="/notebooks" element={<ItemListContainer />} />
         <Route path="/store/:category" element={<ItemListContainer />} />
         <Route exact path="/contact" element={<Contact />} />
         <Route exact path="/cart" element={<Cart />} />
-        <Route path="item/:id" element={<ItemDetailContainer />} />
+        <Route path="/detail/:category" element={<ItemDetailContainer />} />
       </Routes>
 
       <Footer />

@@ -88,6 +88,14 @@
   text-decoration: none;
 }
 
+.dropdown-item:nth-last-child(2) {
+  border-bottom: none;
+  border-bottom: 1px solid grey;
+}
+.dropdown-item:last-child {
+  margin-top: 1.2rem;
+}
+
 .cart-icon {
   position: relative;
   bottom: 8px;

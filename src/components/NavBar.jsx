@@ -17,9 +17,6 @@ function NavBar() {
             <Link to="/" className="nav-boton">
               Home
             </Link>
-            <Link to="/store/notebooks" className="nav-boton">
-              Notebooks
-            </Link>
 
             <Dropdown className="menudrop">
               <Dropdown.Toggle id="dropdown-basic">Store</Dropdown.Toggle>
@@ -34,8 +31,11 @@ function NavBar() {
                 <Dropdown.Item className="dropdown-item">
                   <Link to={`/store/mouse/`}>Mouse</Link>
                 </Dropdown.Item>
-                <Dropdown.Item className="dropdown-item" href="#/action-4">
+                <Dropdown.Item className="dropdown-item">
                   <Link to={`/store/mousepads/`}>Mousepads</Link>
+                </Dropdown.Item>
+                <Dropdown.Item className="dropdown-item">
+                  <Link to={`/store/notebooks/`}>Notebooks</Link>
                 </Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown>

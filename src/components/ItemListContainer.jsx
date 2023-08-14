@@ -5,11 +5,13 @@ import products from "./data";
 
 const ItemListContainer = () => {
   const { category } = useParams();
-  const filteredProducts = products[category] || [];
+  const productsInCategory = products.filter(
+    (product) => product.category === category
+  );
 
   return (
     <div>
-      <ItemList products={filteredProducts} />
+      <ItemList products={productsInCategory} />
     </div>
   );
 };
