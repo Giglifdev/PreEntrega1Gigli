@@ -1,24 +1,28 @@
 import React from "react";
+import ItemDetail from "./ItemDetail";
 import products from "./data.js";
-import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+const getProducts = new Promise((resolve, reject) => {
+  if (products.length > 0) {
+    setTimeout(() => {
+      resolve(products);
+    }, 2000);
+  } else {
+    reject(new Error("no data"));
+  }
+});
+
+getProducts
+  .then((res) => {})
+  .catch((error) => {
+    console.log(error);
+  });
 
 const ItemDetailContainer = () => {
-  const { id } = useParams();
-  console.log(id);
-  const [loadedProduct, setLoadedProduct] = useState(null);
-
-  useEffect(() => {
-    const productDetail = products
-      .flatMap((category) => category)
-      .find((product) => product.id === parseInt(id));
-
-    if (productDetail) {
-      setLoadedProduct(productDetail);
-    }
-  }, [id]);
-
-  return <>{loadedProduct && <ItemDetail product={loadedProduct} />}</>;
+  return (
+    <>
+      <ItemDetail products={products} />
+    </>
+  );
 };
 
 export default ItemDetailContainer;
