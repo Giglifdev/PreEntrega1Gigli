@@ -1,30 +1,31 @@
 import React, { useState, useEffect } from "react";
-
 import { useParams } from "react-router-dom";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 
 const ItemDetail = ({ products }) => {
   const { id } = useParams();
-  const [filteredProducts, setFilteredProduct] = useState(null);
+  const [filteredProduct, setFilteredProduct] = useState(null);
 
   useEffect(() => {
     const product = products.find((product) => product.id === parseInt(id));
     setFilteredProduct(product);
   }, [products, id]);
 
-  if (!filteredProducts) {
-    return <div>Loading...</div>;
+  console.log(filteredProduct);
+
+  if (!filteredProduct) {
+    return null;
   }
-  console.log(filteredProducts);
+
   return (
     <div>
-      <div key={filteredProducts.id}>
+      <div key={filteredProduct.id}>
         <Card style={{ width: "18rem" }}>
-          <Card.Img variant="top" src={filteredProducts.image} />
+          <Card.Img variant="top" src={filteredProduct.image} />
           <Card.Body>
-            <Card.Title>{filteredProducts.name}</Card.Title>
-            <Card.Text>{filteredProducts.stock}</Card.Text>
+            <Card.Title>{filteredProduct.name}</Card.Title>
+            <Card.Text>{filteredProduct.stock}</Card.Text>
             <Button variant="dark">Add to Cart</Button>
           </Card.Body>
         </Card>
