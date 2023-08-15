@@ -6,7 +6,7 @@ import Button from "react-bootstrap/Button";
 
 const ItemDetail = ({ products }) => {
   const { id } = useParams();
-  const [filteredProducts, setFilteredProduct] = useState(null); // Estado para almacenar el producto encontrado
+  const [filteredProducts, setFilteredProduct] = useState(null);
 
   useEffect(() => {
     const product = products.find((product) => product.id === parseInt(id));
@@ -14,7 +14,7 @@ const ItemDetail = ({ products }) => {
   }, [products, id]);
 
   if (!filteredProducts) {
-    return <div>Loading...</div>; // Puedes mostrar un indicador de carga mientras se obtiene el producto
+    return <div>Loading...</div>;
   }
   console.log(filteredProducts);
   return (
