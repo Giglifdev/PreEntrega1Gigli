@@ -12,6 +12,7 @@ const ItemList = ({ products }) => {
         {products.map((product) => (
           <Col key={product.id} sm={3} md={2} lg={3} xl={4}>
             <Item
+              id={product.id}
               name={product.name}
               price={product.price}
               stock={product.stock}

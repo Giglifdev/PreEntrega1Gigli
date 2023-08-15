@@ -3,7 +3,8 @@ import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import { Link } from "react-router-dom";
 
-function Item({ name, image, price, category, id }) {
+function Item({ name, image, price, id }) {
+  console.log("Item ID:", id);
   return (
     <Card
       className="cardObjects"
