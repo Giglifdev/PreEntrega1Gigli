@@ -1,28 +1,34 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
+import { doc, getDoc, getFirestore } from "firebase/firestore";
 import ItemDetail from "./ItemDetail";
-import products from "./data.js";
-
-const getProducts = new Promise((resolve, reject) => {
-  if (products.length > 0) {
-    setTimeout(() => {
-      resolve(products);
-    }, 2000);
-  } else {
-    reject(new Error("no data"));
-  }
-});
-
-getProducts
-  .then((res) => {})
-  .catch((error) => {
-    console.log(error);
-  });
 
 const ItemDetailContainer = () => {
+  const { id } = useParams();
+
+  const [product, setProduct] = useState([]);
+
+  useEffect(() => {
+    const db = getFirestore();
+
+    const itemDetail = doc(db, "products", id);
+    getDoc(itemDetail)
+      .then((docSnapshot) => {
+        if (docSnapshot.exists()) {
+          setProduct({ id: docSnapshot.id, ...docSnapshot.data() });
+        } else {
+          console.log("No such document!");
+        }
+      })
+      .catch((error) => {
+        console.log("Error getting document:", error);
+      });
+  }, []);
+
   return (
-    <>
-      <ItemDetail products={products} />
-    </>
+    <div>
+      <ItemDetail product={product} />
+    </div>
   );
 };
 

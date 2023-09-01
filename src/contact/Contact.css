@@ -1,0 +1,222 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+
+.headercontact {
+  position: relative;
+  bottom: 50vh;
+  padding: 10px;
+  color: #000;
+  text-decoration: underline;
+  left: 43vh;
+  font-size: 35px;
+}
+
+.contactcontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 130vh;
+}
+
+.formcontact {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 550px;
+  background-color: #161a1d;
+  padding: 50px;
+  border-radius: 10px;
+  position: relative;
+  right: 90px;
+}
+
+.message {
+  color: #b1a7a6;
+  font-size: 14px;
+}
+
+.flex {
+  display: flex;
+  width: 100%;
+  gap: 6px;
+}
+
+.formcontact label {
+  position: relative;
+}
+
+.formcontact label .input {
+  width: 100%;
+  padding: 10px 10px 20px 10px;
+  outline: 0;
+  border: 1px solid #fff;
+  border-radius: 5px;
+}
+
+.formcontact label .input + span {
+  position: absolute;
+  left: 10px;
+  top: 15px;
+  color: #b1a7a6;
+  font-size: 0.9em;
+  cursor: text;
+  transition: 0.3s ease;
+}
+
+.formcontact label .input:placeholder-shown + span {
+  top: 15px;
+  font-size: 0.9em;
+}
+
+.formcontact label .input:focus + span,
+.formcontact label .input:valid + span {
+  top: 30px;
+  font-size: 0.7em;
+  font-weight: 600;
+}
+
+.formcontact label .input:valid + span {
+  color: #b1a7a6;
+}
+
+.input01 {
+  width: 100%;
+  padding: 10px 10px 20px 10px;
+  outline: 0;
+  border: 1px solid #fff;
+  border-radius: 5px;
+}
+
+.formcontact label .input01 + span {
+  position: absolute;
+  left: 10px;
+  top: 50px;
+  color: #b1a7a6;
+  font-size: 0.9em;
+  cursor: text;
+  transition: 0.3s ease;
+}
+
+.formcontact label .input01:placeholder-shown + span {
+  top: 40px;
+  font-size: 0.9em;
+}
+
+.formcontact label .input01:focus + span,
+.formcontact label .input01:valid + span {
+  top: 50px;
+  font-size: 0.7em;
+  font-weight: 600;
+}
+
+.formcontact label .input01:valid + span {
+  color: #b1a7a6;
+}
+
+.fancy {
+  background-color: #cdb4db;
+  border: 2px solid #b1a7a6;
+  border-radius: 0px;
+  box-sizing: border-box;
+  color: #b1a7a6;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 390;
+  letter-spacing: 2px;
+  margin: 0;
+  outline: none;
+  overflow: visible;
+  padding: 8px 30px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  text-transform: none;
+  transition: all 0.3s ease-in-out;
+  user-select: none;
+  font-size: 13px;
+}
+
+.fancy::before {
+  content: " ";
+  width: 1.7rem;
+  height: 2px;
+  background: #b1a7a6;
+  top: 50%;
+  left: 1.5em;
+  position: absolute;
+  transform: translateY(-50%);
+  transform: translateX(230%);
+  transform-origin: center;
+  transition: background 0.3s linear, width 0.3s linear;
+}
+
+.fancy .text {
+  font-size: 1.125em;
+  line-height: 1.33333em;
+  padding-left: 2em;
+  display: block;
+  text-align: left;
+  transition: all 0.3s ease-in-out;
+  text-transform: lowercase;
+  text-decoration: none;
+  color: #000;
+  transform: translateX(30%);
+}
+
+.fancy .top-key {
+  height: 2px;
+  width: 1.5625rem;
+  top: -2px;
+  left: 0.625rem;
+  position: absolute;
+  background: #cdb4db;
+  transition: width 0.5s ease-out, left 0.3s ease-out;
+}
+
+.fancy .bottom-key-1 {
+  height: 2px;
+  width: 1.5625rem;
+  right: 1.875rem;
+  bottom: -2px;
+  position: absolute;
+  background: #b1a7a6;
+  transition: width 0.5s ease-out, right 0.3s ease-out;
+}
+
+.fancy .bottom-key-2 {
+  height: 2px;
+  width: 0.625rem;
+  right: 0.625rem;
+  bottom: -2px;
+  position: absolute;
+  background: #b1a7a6;
+  transition: width 0.5s ease-out, right 0.3s ease-out;
+}
+
+.fancy:hover {
+  color: #b1a7a6;
+  background: #000;
+  border: #b1a7a6;
+}
+
+.fancy:hover::before {
+  width: 1.5rem;
+  background: #b1a7a6;
+  border: #b1a7a6;
+}
+
+.fancy:hover .text {
+  color: white;
+  padding-left: 1.5em;
+}
+
+.fancy:hover .top-key {
+  left: -2px;
+  width: 0px;
+}
+
+.fancy:hover .bottom-key-1,
+.fancy:hover .bottom-key-2 {
+  right: 0;
+  width: 0;
+}

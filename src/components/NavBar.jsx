@@ -1,6 +1,6 @@
 import React from "react";
 import { Navbar, Container, Nav, Dropdown } from "react-bootstrap";
-import CartWidget from "./CartWidget";
+import CartWidget from "../Cart/CartWidget";
 import { Link } from "react-router-dom";
 
 function NavBar() {
@@ -43,9 +43,7 @@ function NavBar() {
               Contact
             </a>
 
-            <Link to={`/cart`} className="nav-boton">
-              <CartWidget />
-            </Link>
+            <CartWidget />
           </Nav>
         </Container>
       </Navbar>

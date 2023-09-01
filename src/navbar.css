@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Tilt+Prism&display=swap");
 
 /**
 * ! NavBar , Brand, botons and cart
@@ -15,18 +16,22 @@
   top: 0px;
   width: 100%;
   height: 120px;
+  background-color: #0d1b2a;
   font-family: "Quicksand";
 }
 .nav-brand {
   position: relative;
   bottom: 0;
   right: 50px;
+  color: #fff !important;
   font-size: 30px !important;
+  font-family: "Tilt Prism";
 }
 
 .botons {
   bottom: 30px;
   display: flex;
+  margin-right: 110px;
   margin-left: auto;
   font-family: "Quicksand";
   font-size: 20px;
@@ -35,18 +40,20 @@
 .nav-boton {
   margin-left: 90px;
   font-size: 20px;
-  color: #161a1d;
+  color: #fff;
 }
 
 #dropdown-basic {
   position: relative;
   left: 50px;
   bottom: 7px;
-  border-radius: 2rem;
-  color: #161a1d;
-  border: #cdb4db;
+  color: #fff;
   background-color: #cdb4db;
   font-size: 20px;
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  outline: none;
   font-family: "Quicksand";
 }
 
@@ -103,12 +110,15 @@
   display: flex;
   align-items: center;
 }
-
+.cart-icon img {
+  filter: brightness(0) invert(1);
+}
 .count {
   position: relative;
   font-size: 15px;
   top: 3px;
   right: 15px;
+  color: #cdb4db;
 }
 /**
 * ! NavBar , Brand, botons and cart
